@@ -28,5 +28,9 @@ Route::middleware('auth')
     Route::get('/', 'HomeController@index')->name('index');
     Route::get('/test', 'HomeController@test')->name('test');
 
+    Route::get('/users', 'UserController@index')->name('users.index');
+    Route::patch('/users/{user}', 'UserController@update')->name('users.update');
+    Route::get('/users/{user}/edit', 'UserController@edit')->name('users.edit');
+
     Route::resource('posts', 'PostController');
     });
