@@ -17,6 +17,8 @@
                     <dd>{{ $post->slug }}</dd>
                     <dt>Contenuto</dt>
                     <dd>{{ $post->content }}</dd>
+                    <dt>Autore</dt>
+                    <dd>{{ $post->user->name }}</dd>
 
                 </dl>
                 <a href="{{ route('admin.posts.edit', ['post' => $post->slug]) }}"
